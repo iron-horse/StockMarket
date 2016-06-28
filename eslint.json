@@ -1,0 +1,60 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 5,
+        "sourceType": "script"
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "jquery": true
+    },
+    "globals":{
+        "c3": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "strict": ["error", "safe"],
+        "eqeqeq": ["error", "always"],
+        "curly": "error",
+        "guard-for-in": "error",
+        "dot-notation": "error",
+        "no-empty-function": "error",
+        // "no-invalid-this": "error",
+        "no-loop-func": "error",
+        // "no-multi-spaces": "error",
+        "no-multi-str": "error",
+        "no-redeclare": "error",
+        "no-sequences": "error",
+        "no-useless-call": "error",
+        "vars-on-top": "error",
+        "wrap-iife": ["error", "inside"],
+        "yoda": "error",
+        "no-console": "off",
+        "init-declarations": ["error", "always"],
+        "no-delete-var": "error",
+        "no-label-var": "error",
+        "no-shadow": "error",
+        "no-shadow-restricted-names": "error",
+        "no-undef-init": "error",
+        "no-undefined": "error",
+        "callback-return": "error",
+        "global-require": "warn",
+        "handle-callback-err": "error",
+        "camelcase": "error",
+        "comma-style": ["error", "last"],
+        "eol-last": "error",
+        "func-names": "off",
+        // "indent": ["error", "tab"],
+        "key-spacing": ["error", {"beforeColon": false, "afterColon": true}],
+        "keyword-spacing": ["error", {"before": true, "after": true}],
+        "lines-around-comment": ["error", {
+            "beforeBlockComment": true,
+            "beforeLineComment": true
+        }],
+        "new-cap": "error",
+        "new-parens": "error",
+        "newline-before-return": "error",
+        "no-plusplus": "error",
+        "semi": ["error", "always"]
+    }
+}

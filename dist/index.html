@@ -1,0 +1,37 @@
+
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+        
+		<title>Stock Market</title>
+
+        <link rel="stylesheet" href="c3/c3.min.css" />
+        
+        <link rel="stylesheet" href="styles/styles.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" type="text/css">    
+	</head>
+	<body>
+        <div ng-app="app" class="my-app">
+        <div>
+            This is my app running in production!
+		</div>
+        <menu>
+            <ul class="menu">
+                <li><a href="#!/">Market View</a></li>
+                <li><a href="#!/management">management View</a></li>
+                <li><a href="#!/investor">Investor View</a></li>
+            </ul>
+        </menu>
+        <div ng-view></div>
+        </div>
+    
+    <script src="angular/angular.min.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="d3/d3.min.js"></script>
+    <script src="c3/c3.min.js"></script>
+    <script src="app.min.js"></script>
+
+    </body>
+</html>

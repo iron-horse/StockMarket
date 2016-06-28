@@ -1,0 +1,36 @@
+{
+  "name": "StockMarket",
+  "version": "0.0.0",
+  "description": "single page applicaiton for stock market by Bhargav Patel",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-route": "^1.5.7",
+    "body-parser": "^1.15.1",
+    "bootstrap": "^3.3.6",
+    "c3": "0.4.11-rc4",
+    "d3": "~3.5.0",
+    "express": "~3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-run": "^0.6.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.12.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.4.2",
+    "eslint-plugin-react": "^5.1.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-eslint": "^18.1.0",
+    "grunt-mocha-test": "^0.12.7",
+    "grunt-protractor-runner": "^3.2.0",
+    "grunt-run": "^0.6.0",
+    "jasmine-node": "^1.14.5",
+    "mocha": "^2.5.3",
+    "protractor": "^2.5.1",
+    "supertest": "^1.2.0"
+  }
+}

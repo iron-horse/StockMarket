@@ -1,0 +1,13 @@
+<hr>
+<div class="row">
+	<div class="form-inline">
+		<div class="form-group">
+			<div class="col-xs-3"><strong>{{stock.symbol}}</strong></div>
+			<div class="col-xs-3">{{quantity}}</div>
+			<div class="col-xs-3">{{stock.price | currency}}</div>
+			<div class="col-xs-3"><a ng-click="refresh(stock.symbol)">Refresh</a></div>
+		</div>
+	</div>
+	<stock-graph prices="stock.tradeHistory.prices" timestamps="stock.tradeHistory.timestamps"></stock-graph>
+</div>
+

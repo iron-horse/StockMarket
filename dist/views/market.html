@@ -1,0 +1,9 @@
+<h3 id="title">
+Market View
+</h3>
+<div ng-controller="marketController">
+	<strong>List of market stocks</strong>
+	<div ng-repeat="stock in stocks">
+		<stock-details stock="stock" quantity="stock.quantity"></stock-details>
+	</div>
+</div>

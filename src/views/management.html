@@ -1,0 +1,110 @@
+<h3 id="title">
+Management View
+</h3>
+
+<h4>
+	..Investor Information..
+</h4>
+<button class="btn btn-success" id="open" ng-click="marketAction('open')"> Open </button>
+<button class="btn btn-warning" id="close" ng-click="marketAction('close')"> Close </button>
+<div ng-controller="managementController">
+	<div class="container">
+	<p id="message" class="alert-{{messageColor}}">{{ message }}</p>
+	    <form name="Investor" novalidate>
+		    <table class="table investors-table">
+		      	<thead>
+			        <tr>
+			          <th>Name</th>
+			          <th>Capital</th>
+			          <th>Action</th>
+			        </tr>
+		      	</thead>
+		      	<tbody>
+			        <tr>
+			          	<td>
+			          		<input class="form-control" ng-model="investor.name" placeholder="Investor Name" required>
+			          	</td>
+			          	<td>
+			          		<input type="number" class="form-control" ng-model="investor.capital" placeholder="Capital" required>
+			          	</td>
+			          	<td>
+			          		<button id="addInvestor" class="btn btn-primary" ng-click="addInvestor(investor)" type="submit" ng-disabled="!Investor.$valid">Add Investor</button>
+			            </td>
+			        </tr>
+			        <tr ng-repeat="investor in investors">
+			          	<td>{{investor.name}}</td>
+			          	<td>{{investor.capital | currency }}</td>
+			          	<td>
+			            	<div class="btn-group">
+			              		<button class="btn btn-danger activateInvestor" ng-click="makeActive(investor)">Make Active</button>
+			              	</div>
+			          	</td>
+			        </tr>
+		      	</tbody>
+		    </table>
+		</form>
+	</div>
+
+<h4>
+	..Stock Information..
+</h4>
+	<div class="container">
+	    <form name="Stock" novalidate>
+		    <table class="table stocks-table">
+		      	<thead>
+			        <tr>
+			          <th>Symbol</th>
+			          <th>Price</th>
+			          <th>Quantity</th>
+			          <th>Growthrate</th>
+			          <th>Change interval</th>
+			          <th>Volatility percent</th>
+			        </tr>
+		      	</thead>
+		      	<tbody>
+			        <tr>
+			          	<td>
+			          		<input class="form-control" ng-readonly="edit" ng-model="stock.symbol" placeholder="Stock symbol" ng-change="stock.symbol=stock.symbol.toUpperCase();" required>
+			          	</td>
+			          	<td>
+			          		<input type="number" ng-readonly="edit" class="form-control" ng-model="stock.price" placeholder="Price" required>
+			          	</td>
+			          	<td>
+			          		<input type="number" ng-readonly="edit" class="form-control" ng-model="stock.quantity" placeholder="Quantity" required>
+			          	</td>
+			          	<td>
+			          		<input type="number" class="form-control" ng-model="stock.growthRate" placeholder="Growth rate" required>
+			          	</td>
+			          	<td>
+			          		<input type="number" class="form-control" ng-model="stock.changeInterval" placeholder="Change Interval" required>
+			          	</td>
+			          	<td>
+			          		<input type="number" type="number" class="form-control" ng-model="stock.volatilityPercent" placeholder="Volatility Percent" required>
+			          	</td>
+			          	<td>
+			            <button  id="addStock" class="btn btn-primary" ng-click="addStock(stock)" type="submit" ng-disabled="!Stock.$valid" ng-if="!edit">Add Stock</button>
+				            <div class="btn-group">
+				              <button class="btn btn-info" ng-click="updateStock(stock)" ng-if="edit" ng-disabled="!Stock.$valid"  type="submit">Update</button>
+				              <button class="btn" ng-click="deselectStock()" ng-if="edit">Clear</button>
+				            </div>
+				          </td>
+			        </tr>
+			        <tr ng-repeat="stock in stocks">
+			          	<td>{{stock.symbol}}</td>
+			          	<td>{{stock.price | currency}}</td>
+			          	<td>{{stock.quantity}}</td>
+			          	<td>{{stock.growthRate}}</td>
+			          	<td>{{stock.changeInterval}}</td>
+			          	<td>{{stock.volatilityPercent}}</td>
+			          	<td>
+			            	<div class="btn-group">
+			              		<button class="btn btn-warning" ng-click="editStock(stock)">Edit</button>
+			              	</div>
+			          	</td>
+			        </tr>
+		      	</tbody>
+		    </table>
+		</form>
+	</div>
+</div>
+

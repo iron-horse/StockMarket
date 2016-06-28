@@ -1,0 +1,15 @@
+body {
+	background: #E4E8EA;
+	font-family: helvetica;
+	text-align: center;
+}
+
+a {
+  cursor: pointer;
+  color: blue;
+}
+
+.menu{
+	list-style: None;
+	display: inline;
+}
