@@ -1,7 +1,7 @@
-* Outline the install and run-time instructions:
+### Outline the install and run-time instructions:
 
-Node version : 5.6.0
-npm version: 2.14.7
+Node version : `5.6.0`
+npm version: `2.14.7`
 
 ### Install Dependencies
 
@@ -11,29 +11,10 @@ npm version: 2.14.7
 
     grunt run:prod
 
-**You may see this warnings since we are not installing dev dependancies.**
-
-```
->> Local Npm module "grunt-mocha-test" not found. Is it installed?
->> Local Npm module "grunt-eslint" not found. Is it installed?
->> Local Npm module "grunt-protractor-runner" not found. Is it installed?
->> Local Npm module "grunt-contrib-uglify" not found. Is it installed?
->> Local Npm module "grunt-contrib-copy" not found. Is it installed?
-```
 
 ### Check It Out in a Browser
 
 Check out the running application by opening it in your web browser: [http://localhost:5000/](http://localhost:5000/)
-
-
-* Description of the application
-- Single page application have three different views (market view, investor view, management view)
-- Each view will have one controller
-    - All controllers will be in separate directory/file for separation of concerns.
-- For three data models, there are three angular services ( marketService, investorService, stockService)
-    - Services will interact with NodeJS server.
-- For reusability and clean HTML code there are some directives. ( stockDetails, stockGraph)
-- Grunt tasks to handle start the server, to run the tests and to move production code in dist directory
 
 * Errors And TODOs
     - Known issuses
@@ -50,7 +31,7 @@ Check out the running application by opening it in your web browser: [http://loc
 
 ### For Unit Test
     
-    - Start/Restart the dev server using
+    - Restart the dev server using
     
         - grunt run:dev
 
@@ -62,7 +43,7 @@ Check out the running application by opening it in your web browser: [http://loc
 
 ### For e2e Test
     
-    - Start/Restart the dev server using
+    - Restart the dev server using
     
         - grunt run:dev
 
