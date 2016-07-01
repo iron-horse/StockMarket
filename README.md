@@ -1,5 +1,8 @@
 * Outline the install and run-time instructions:
 
+Node version : 5.6.0
+npm version: 2.14.7
+
 ### Install Dependencies for production
 
     npm install --production
