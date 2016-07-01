@@ -9,7 +9,8 @@
         "jquery": true
     },
     "globals":{
-        "c3": true
+        "c3": true,
+        "angular":true
     },
     "extends": "eslint:recommended",
     "rules": {
