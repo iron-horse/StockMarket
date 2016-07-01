@@ -5,6 +5,8 @@ npm version: `2.14.7`
 
 ### Install Dependencies
 
+    npm cache clean -g
+    npm cache clean
     npm install
 
 ### Start the production server using 
