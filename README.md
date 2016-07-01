@@ -1,3 +1,21 @@
+# Stock Market Single Page Application
+
+You can see all listed markets stocks on market view.
+You can create/edit investors and stocks, open/close the market from management view.
+You can buy/sell stocks when market is open from investor view.
+
+**Note:** Only one investor can be active at a time. You can manage active investor from management view.
+
+* Errors And TODOs
+    - Known issuses
+        - Error message in console about Date parsing from C3.js library
+    - TODO
+        - Use routers for routes
+        - On server data validation is not fully covered.
+        - Add more test cases for differnt scenarios.
+        - Add more validation on management view while creating / editing stock and/or investors, eg. should not allow user to enter negative values.
+        - Configure protractor to test with different browsers.
+
 ### Outline the install and run-time instructions:
 
 Node version : `5.6.0`
@@ -18,15 +36,7 @@ npm version: `2.14.7`
 
 Check out the running application by opening it in your web browser: [http://localhost:5000/](http://localhost:5000/)
 
-* Errors And TODOs
-    - Known issuses
-        - Error message in console about Date parsing from C3.js library
-    - TODO
-        - Use routers for routes
-        - On server data validation is not fully covered.
-        - Add more test cases for differnt scenarios.
-        - Add more validation on management view while creating / editing stock and/or investors, eg. should not allow user to enter negative values. ( I have added validation for investors view though. )
-        - Configure protractor to test with different browsers.
+
 
 
 # To test the application
