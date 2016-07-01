@@ -3,9 +3,9 @@
 Node version : 5.6.0
 npm version: 2.14.7
 
-### Install Dependencies for production
+### Install Dependencies
 
-    npm install --production
+    npm install
 
 ### Start the production server using 
 
@@ -48,15 +48,9 @@ Check out the running application by opening it in your web browser: [http://loc
 
 # To test the application
 
-
-### Install Dependencies for dev
-
-    npm install --dev
-
-
 ### For Unit Test
     
-    - Start the dev server using
+    - Start/Restart the dev server using
     
         - grunt run:dev
 
@@ -68,7 +62,7 @@ Check out the running application by opening it in your web browser: [http://loc
 
 ### For e2e Test
     
-    - Start the dev server using
+    - Start/Restart the dev server using
     
         - grunt run:dev
 
