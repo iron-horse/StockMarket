@@ -62,7 +62,24 @@
 							count: 5
 						}
 					}
-				}
+				},
+				tooltip: {
+					position: function(data, width, height, thisElement) {
+			      	var containerWidth, tooltipWidth, x, y;
+			      	containerWidth = document.clientWidth;
+			      	tooltipWidth = document.querySelector('.c3-tooltip-container').clientWidth;
+			      	x = parseInt(thisElement.getAttribute('x'));
+			      	if (x + tooltipWidth > containerWidth) {
+			        	x = containerWidth - tooltipWidth - 2;
+			      	}
+			      	y = thisElement.getAttribute('y');
+			      	y = y - (height * 5);
+			      	return {
+			        	top: y,
+			        	left: x
+			      	};
+			    	}
+		        }
 			});
 			// scope.chart.zoom.enable(true);
 			scope.$watch('timestamps', function() {
