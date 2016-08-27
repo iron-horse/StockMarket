@@ -45,29 +45,26 @@
 		function stockGraphController(scope, element) {
 			scope.chart = c3.generate({
 				bindto: $window.d3.select(element[0]),
-				size: {
-					height: 240,
-					width: 1000
-				},
 				data: {
 					x: 'timestamp',
-					xFormat: '%Y-%m-%d %H:%M:%S',
 					columns: [
 						['price'].concat(scope.prices),
 						['timestamp'].concat(scope.timestamps)
-					]
+					],
+					xFormat: '%Y-%m-%dT%H:%M:%S.%LZ',
 				},
 				axis: {
 					x: {
 						type: 'timeseries',
 						tick: {
 							fit: true,
-							format: '%Y-%m-%d %H:%M:%S'
+							format: '%H:%M:%S',
+							count: 5
 						}
 					}
 				}
 			});
-			scope.chart.zoom.enable(true);
+			// scope.chart.zoom.enable(true);
 			scope.$watch('timestamps', function() {
 				scope.chart.load({columns: [
 					['price'].concat(scope.prices.slice(-25)),

@@ -13,3 +13,7 @@ a {
 	list-style: None;
 	display: inline;
 }
+
+.chart svg{
+  width: 80%;
+}
